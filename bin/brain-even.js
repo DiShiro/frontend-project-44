@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-import { isEven, generationNumber } from '../helpers/helpers.js';
+import { isEven, generationNumber } from '../src/helpers/helpers.js';
 import runGame from '../src/runGame.js';
 
 const createEvenCheckQuestion = () => {

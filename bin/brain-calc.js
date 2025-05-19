@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-import { generationMathOperator, calcNums, generationNumber } from '../helpers/helpers.js';
+import { generationMathOperator, calcNums, generationNumber } from '../src/helpers/helpers.js';
 
 const createCalcQuestion = () => {
   const num1 = generationNumber();
