@@ -1,9 +1,9 @@
 #!/usr/bin/env node
 
-import welcomeUser from '../src/cli.js'
+import welcomeUser from '../src/cli.js';
 
-console.log('Welcome to the Brain Games!')
+console.log('Greetings from Brain Games!');
 
-const name = welcomeUser()
+const userName = welcomeUser();
 
-console.log(`Hello, ${name}!`)
+console.log(`Hello, ${userName}!`);

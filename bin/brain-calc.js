@@ -2,16 +2,16 @@
 
 import { generationMathOperator, calcNums, generationNumber } from '../helpers/helpers.js';
 
-const generateCalcQuestion = () => {
-  const a = generationNumber();
-  const b = generationNumber();
-  const operator = generationMathOperator();
+const createCalcQuestion = () => {
+  const num1 = generationNumber();
+  const num2 = generationNumber();
+  const mathOperator = generationMathOperator();
 
-  const question = `${a} ${operator} ${b}`;
-  const correctAnswer = String(calcNums(a, b, operator));
+  const question = `${num1} ${mathOperator} ${num2}`;
+  const correctAnswer = String(calcNums(num1, num2, mathOperator));
 
   return [question, correctAnswer];
 };
 
-const description = 'What is the result of the expression?';
-runGame(description, generateCalcQuestion);
+const description = 'Calculate the result of the expression:';
+runGame(description, createCalcQuestion);
