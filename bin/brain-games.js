@@ -2,7 +2,7 @@
 
 import welcomeUser from '../src/cli.js';
 
-console.log('Greetings from Brain Games!');
+console.log('Welcome to the Brain Games!');
 
 const userName = welcomeUser();
 
