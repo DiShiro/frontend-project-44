@@ -1,18 +1,18 @@
 #!/usr/bin/env node
 
-import { generationMathOperator, calcNums, generationNumber } from '../src/helpers/helpers.js';
-import runGame from '../src/runGame.js';
+import runGame from '../src/runGame.js'
+import { generationMathOperator, calcNums, generationNumber } from '../src/helpers/helpers.js'
 
-const createCalcQuestion = () => {
-  const num1 = generationNumber();
-  const num2 = generationNumber();
-  const mathOperator = generationMathOperator();
+const generateCalcQuestion = () => {
+  const a = generationNumber()
+  const b = generationNumber()
+  const operator = generationMathOperator()
 
-  const question = `${num1} ${mathOperator} ${num2}`;
-  const correctAnswer = String(calcNums(num1, num2, mathOperator));
+  const question = `${a} ${operator} ${b}`
+  const correctAnswer = String(calcNums(a, b, operator))
 
-  return [question, correctAnswer];
-};
+  return [question, correctAnswer]
+}
 
-const description = 'Calculate the result of the expression:';
-runGame(description, createCalcQuestion);
+const description = 'What is the result of the expression?'
+runGame(description, generateCalcQuestion)

@@ -1,16 +1,14 @@
 #!/usr/bin/env node
 
-import { generationNumber, isPrime } from '../src/helpers/helpers.js';
-import runGame from '../src/runGame.js';
+import runGame from '../src/runGame.js'
+import { generationNumber, isPrime } from '../src/helpers/helpers.js'
 
 const generatePrimeQuestion = () => {
-  const number = generationNumber();
-  const isNumberPrime = isPrime(number);
-  const question = `${number}`;
-  const correctAnswer = isNumberPrime ? 'yes' : 'no';
-  
-  return [question, correctAnswer];
-};
+  const num = generationNumber()
+  const question = num
+  const correctAnswer = isPrime(num) ? 'yes' : 'no'
+  return [question, correctAnswer]
+}
 
-const description = 'Answer "yes" if the given number is prime. Otherwise answer "no".';
-runGame(description, generatePrimeQuestion);
+const description = 'Answer "yes" if given number is prime. Otherwise answer "no".'
+runGame(description, generatePrimeQuestion)

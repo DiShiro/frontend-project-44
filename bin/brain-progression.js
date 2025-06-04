@@ -1,16 +1,16 @@
 #!/usr/bin/env node
 
-import { generationArithmeticProgression, replaceRandomWithDots } from '../src/helpers/helpers.js';
-import runGame from '../src/runGame.js';
+import { generationArithmeticProgression, replaceRandomWithDots } from '../src/helpers/helpers.js'
+import runGame from '../src/runGame.js'
 
 const generateProgressionQuestion = () => {
-  const progression = generationArithmeticProgression();
-  const [modifiedProgression, missingNumber] = replaceRandomWithDots(progression);
+  const arr = generationArithmeticProgression()
+  const [newArr, correctAnswer] = replaceRandomWithDots(arr)
 
-  const question = modifiedProgression.join(' '); 
+  const question = newArr.join(' ')
 
-  return [question, String(missingNumber)]; 
-};
+  return [question, correctAnswer]
+}
 
-const description = 'What number is missing in the progression?';
-runGame(description, generateProgressionQuestion);
+const description = `What number is missing in the progression?`
+runGame(description, generateProgressionQuestion)

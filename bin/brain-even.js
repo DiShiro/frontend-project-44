@@ -1,16 +1,16 @@
 #!/usr/bin/env node
 
-import { isEven, generationNumber } from '../src/helpers/helpers.js';
-import runGame from '../src/runGame.js';
+import { isEven, generationNumber } from '../src/helpers/helpers.js'
+import runGame from '../src/runGame.js'
 
-const createEvenCheckQuestion = () => {
-  const number = generationNumber();
-  const answer = isEven(number) ? 'yes' : 'no';
+const generateEvenQuestion = () => {
+  const num = generationNumber()
+  const correctAnswer = String(isEven(num) ? 'yes' : 'no')
 
-  const question = `${number}`;
+  const question = `${num}`
 
-  return [question, answer];
-};
+  return [question, correctAnswer]
+}
 
-const description = 'Respond with "yes" if the number is even, otherwise answer "no".';
-runGame(description, createEvenCheckQuestion);
+const description = `Answer "yes" if the number is even, otherwise answer "no".`
+runGame(description, generateEvenQuestion)
